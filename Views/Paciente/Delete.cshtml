@@ -1,0 +1,57 @@
+@model Turnos.Models.Paciente
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Eliminar</title>
+</head>
+<h3> ¿Está usted seguro de eliminar el siguiente registro? </h3>
+
+<div class="row">
+    <div class="col s12 m6">
+      <div class="card hoverable orange darken-1">
+        <div class="card-content white-text">
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Nombre)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(modelo => modelo.Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Apellido)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(modelo => modelo.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Direccion)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(modelo => modelo.Telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Telefono)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(modelo => modelo.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Email)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdPaciente"/>
+        <input type="submit"  class="waves-effect waves-light btn red" value="Eliminar"/> |
+        <a asp-action="Index" class="waves-effect waves-light btn">Volver</a>
+    </form>
+    </div>
+  </div>
+ </div>
+</div> 
+</html>

@@ -1,0 +1,64 @@
+@model Turnos.Models.Paciente
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+<h4>Paciente</h4>
+</hr>
+ <div class="row">
+    <div class="col s12 m6">
+      <div class="card hoverable orange darken-1">
+        <div class="card-content white-text">
+
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Nombre)
+        </dd>
+        <hr></hr>
+         <dt>
+            @Html.DisplayNameFor(modelo => modelo.Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Apellido)
+        </dd>
+        <hr></hr>
+         <dt>
+            @Html.DisplayNameFor(modelo => modelo.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Direccion)
+        </dd>
+        <hr></hr>
+         <dt>
+            @Html.DisplayNameFor(modelo => modelo.Telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Telefono)
+        </dd>
+        <hr></hr>
+         <dt>
+            @Html.DisplayNameFor(modelo => modelo.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Email)
+        </dd>
+    </dl>
+   </div>
+  </div>
+ </div>
+</div>
+<div>
+    @* <a asp-action="Edit" asp-route-id="@Model.IdPaciente">Editar</a> | *@
+    <a asp-action="Index"  class="waves-effect waves-light btn">Volver</a>
+</div>
+
+    
+</body>
+</html>
